@@ -1,0 +1,7 @@
+.chaty-cta-button svg ellipse {
+    fill: #003B5E !important; /* Change this to your desired color /
+}
+
+.chaty-cta-button svg circle {
+    fill: #003B5E !important; / Change this to your desired color */
+}
