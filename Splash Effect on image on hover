@@ -1,0 +1,25 @@
+/*Splash Effect on Hover on Image*/
+.brxe-pfrngl.brxe-block {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.brxe-pfrngl.brxe-block::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(140, 225, 90, 0.5); /* Adjust splash color */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+.brxe-pfrngl.brxe-block:hover::after {
+  width: 200%;
+  height: 200%;
+}
