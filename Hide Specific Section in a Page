@@ -1,0 +1,5 @@
+/*Hide Specific Section in a specific page In Bricks Builder*/
+
+.page-id-799 #brxe-kmvslv {
+    display: none !important;
+}
