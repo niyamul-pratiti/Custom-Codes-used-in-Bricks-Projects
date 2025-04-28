@@ -1,0 +1,7 @@
+.btn:focus, .brxe-button:focus, .bricks-button:focus {
+    outline: none !important;
+}
+
+:where(a) {
+  color: var(--link-color);
+}
