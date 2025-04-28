@@ -1,0 +1,14 @@
+/*Footer CSS*/
+.footer-section__menu-list.brxe-list li {
+  transition: 0.5s ease;
+}
+.footer-section__menu-list.brxe-list li:hover {
+  transform: translateX(-5px);
+}
+/*Social Hover */
+.footer-section__social-links.brxe-social-icons li {
+  transition: 0.5s ease;
+}
+.footer-section__social-links.brxe-social-icons li:hover {
+  transform: translateY(-5px);
+}
