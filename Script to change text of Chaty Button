@@ -1,0 +1,16 @@
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const observer = new MutationObserver(function () {
+      const closeBtn = document.querySelector('.chaty-channel.chaty-cta-close.chaty-tooltip');
+      if (closeBtn && closeBtn.getAttribute('data-hover') === 'Hide') {
+        closeBtn.setAttribute('data-hover', 'הסתר');
+        observer.disconnect(); // Stop after changing
+      }
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+  });
+</script>
