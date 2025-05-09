@@ -1,0 +1,3 @@
+#chaty-widget-0 .chaty-widget{ /*Chaty-widget-0 is the id of the widget you created*/
+bottom:10px; /*Adjust Position as you want*/
+}
