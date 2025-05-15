@@ -1,0 +1,41 @@
+.bricks-nav-menu li > a,
+.bricks-nav-menu li.menu-item-has-children > .brx-submenu-toggle > a {
+  position: relative;
+  overflow: hidden;
+}
+
+.bricks-nav-menu li > a::before,
+.bricks-nav-menu li > a::after,
+.bricks-nav-menu li.menu-item-has-children > .brx-submenu-toggle > a::before,
+.bricks-nav-menu li.menu-item-has-children > .brx-submenu-toggle > a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #4A4948;
+  transition: all 0.5s;
+}
+
+.bricks-nav-menu li > a::before,
+.bricks-nav-menu li.menu-item-has-children > .brx-submenu-toggle > a::before {
+  top: 0;
+  left: 0;
+}
+
+.bricks-nav-menu li > a::after,
+.bricks-nav-menu li.menu-item-has-children > .brx-submenu-toggle > a::after {
+  bottom: 0;
+  right: 0;
+}
+
+.bricks-nav-menu li > a:hover::before,
+.bricks-nav-menu li.menu-item-has-children > .brx-submenu-toggle > a:hover::before {
+  width: 100%;
+  transition: width 0.25s ease-in-out;
+}
+
+.bricks-nav-menu li > a:hover::after,
+.bricks-nav-menu li.menu-item-has-children > .brx-submenu-toggle > a:hover::after {
+  width: 100%;
+  transition: width 0.25s ease-in-out 0.25s;
+}
