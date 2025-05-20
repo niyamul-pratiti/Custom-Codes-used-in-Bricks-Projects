@@ -1,5 +1,7 @@
-body.bricks-is-frontend :focus-visible {
-    outline: none;
+@media (max-width: 767px) {
+    body.bricks-is-frontend :focus-visible {
+        outline: none;
+    }
 }
 
 :focus-visible {
