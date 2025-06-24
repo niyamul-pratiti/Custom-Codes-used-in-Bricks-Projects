@@ -1,0 +1,32 @@
+.image-hover-wrapper {
+  position: relative;
+  overflow: hidden; /* optional: prevents button from overflowing */
+}
+
+.hover-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.image-hover-wrapper:hover .hover-button {
+  opacity: 1;
+  visibility: visible;
+}
+
+.image-container {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.hover-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
