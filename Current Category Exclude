@@ -1,0 +1,18 @@
+add_filter( 'bricks/terms/query_vars', function( $query_vars, $settings, $element_id ) {
+  if ( $element_id === 'element_id' && is_tax() ) {
+    $query_vars['exclude'] = [ get_queried_object()->term_id ];
+  }
+
+  return $query_vars;
+}, 12, 3 );
+
+// like this example // bricks loop id brxe-atrxfi
+
+add_filter( 'bricks/terms/query_vars', function( $query_vars, $settings, $element_id ) {
+  if ( $element_id === 'atrxfi' && is_tax() ) {
+    $query_vars['exclude'] = [ get_queried_object()->term_id ];
+  }
+
+  return $query_vars;
+}, 12, 3 );
+
