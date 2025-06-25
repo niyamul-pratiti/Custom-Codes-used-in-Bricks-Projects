@@ -1,0 +1,13 @@
+Condition --
+Dynamic Data
+{query_results_count:blockid} [Without brxe]
+equation
+number
+
+
+example Show if there is more than 1 images in the product gallery
+
+Dynamic Data
+{query_results_count:zyxnp}
+>
+1
