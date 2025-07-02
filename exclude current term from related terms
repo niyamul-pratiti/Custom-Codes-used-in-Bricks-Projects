@@ -1,0 +1,8 @@
+add_filter( 'bricks/terms/query_vars', function( $query_vars, $settings, $element_id ) {
+  if ( $element_id === 'atrxfi' && is_tax() ) {
+    $query_vars['exclude'] = [ get_queried_object()->term_id ];
+    $query_vars['number'] = 5; // Limit to 5 categories
+  }
+
+  return $query_vars;
+}, 12, 3 );
