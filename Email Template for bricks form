@@ -12,8 +12,8 @@
       padding: 20px;
     }
     .email-container {
-      direction: rtl;       /* Added */
-      text-align: right;    /* Added */
+      direction: rtl;
+      text-align: right;
       max-width: 600px;
       margin: auto;
       background: #ffffff;
@@ -39,6 +39,10 @@
 </head>
 <body>
   <div class="email-container" dir="rtl" style="direction: rtl; text-align: right;">
+    <div class="field">
+      <span class="label">שם הטופס:</span>
+      <span class="value">טופס יצירת קשר של Juvenil</span>
+    </div>
     <div class="field">
       <span class="label">שם:</span>
       <span class="value">{{412164}}</span>
