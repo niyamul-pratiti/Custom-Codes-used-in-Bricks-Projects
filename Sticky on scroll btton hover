@@ -1,0 +1,24 @@
+
+/*sticky on scroll button
+#brxe-ehmqce.scrolling>li::hover {
+  border-bottom: 2px solid black;
+}
+
+
+
+.scrolling .bricks-nav-menu li:hover  {
+  color:red;
+}
+
+*/
+
+
+#B6D6C5
+
+#brx-header.sticky.scrolling .current-menu-item.bricks-nav-menu li {
+     border-bottom: 2px solid black;
+}
+
+#brx-header.sticky.scrolling .bricks-nav-menu li:active .scrolling {
+  border-bottom: 2px solid black;
+}
