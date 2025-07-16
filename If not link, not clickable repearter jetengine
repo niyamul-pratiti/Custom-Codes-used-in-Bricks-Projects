@@ -1,0 +1,20 @@
+/*If no link , not clickable*/
+anchor button code : <a href="%button_link%" class="price-button" target="_blank">%button_text%</a>
+
+cusotm css :
+
+/* Hide buttons where the href is empty or only "#" */
+.price-button[href=""],
+.price-button:not([href]) {
+  pointer-events: none;
+  cursor: default;
+  color: #000 !important;
+  border-color: #000 !important;
+  text-decoration: none;
+}
+
+/* Optional: totally hide them if link is missing */
+.price-button[href=""],
+.price-button:not([href]) {
+  display: none;
+}
