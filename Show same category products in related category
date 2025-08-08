@@ -1,0 +1,7 @@
+Go to Loop
+Add a taxonomy query
+select taxonomy (e.g. product categories)
+Field : slug
+Terms : Select dynamic data of product categories
+Compare : IN 
+Include Children : True/False Depends on your preference.
