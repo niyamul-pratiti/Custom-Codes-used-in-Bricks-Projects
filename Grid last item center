@@ -1,0 +1,11 @@
+@media (max-width: 767px) {
+  #brxe-ptazlg {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr; /* keep two columns on mobile */
+  }
+
+  #brxe-ptazlg > *:last-child {
+    grid-column: 1 / -1;  /* span across both columns */
+    justify-self: center; /* center horizontally */
+  }
+}
