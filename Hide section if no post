@@ -1,0 +1,10 @@
+I have a section that contains a previous next post widget. If there are no posts to display how can I hide the entire section?
+
+I have been trying to use the conditions with:
+
+Dynamic Data
+{query_results_count:element id without brxe}
+<=
+0
+
+conditions must be set on section that should be hidden
