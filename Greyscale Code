@@ -1,0 +1,12 @@
+Add it on Wrapper block
+//
+%root% {
+  img {
+  filter: grayscale(100%);
+  transition: 0.5s ease;
+}
+    img:hover {
+  filter: grayscale(0%);
+  transition: 0.5s ease;
+}
+}
