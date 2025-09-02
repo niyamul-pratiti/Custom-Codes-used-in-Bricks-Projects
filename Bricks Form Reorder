@@ -1,0 +1,11 @@
+#brxe-kdzagx {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Target by input IDs */
+#brxe-kdzagx .form-group:nth-child(1) { order: 1; } /* Name */
+#brxe-kdzagx .form-group:nth-child(2) { order: 2; } /* Email */  
+#brxe-kdzagx .form-group:nth-child(3) { order: 3; } /* Phone */
+#brxe-kdzagx .form-group:nth-child(4) { order: 5; } /* Terms */
+#brxe-kdzagx .submit-button-wrapper { order: 4; }   /* Submit */
