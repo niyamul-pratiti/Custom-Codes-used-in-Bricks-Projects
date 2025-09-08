@@ -1,0 +1,3 @@
+.brxe-dropdown:not(.open) .brx-dropdown-content {
+    pointer-events: auto;
+}
