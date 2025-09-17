@@ -1,11 +1,22 @@
-#brxe-kdzagx {
-    display: flex;
-    flex-direction: row;
+/* Default (desktop / tablet) */
+#brxe-spyxea {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* helps responsiveness */
 }
 
-/* Target by input IDs */
-#brxe-kdzagx .form-group:nth-child(1) { order: 1; } /* Name */
-#brxe-kdzagx .form-group:nth-child(2) { order: 2; } /* Email */  
-#brxe-kdzagx .form-group:nth-child(3) { order: 3; } /* Phone */
-#brxe-kdzagx .form-group:nth-child(4) { order: 5; } /* Terms */
-#brxe-kdzagx .submit-button-wrapper { order: 4; }   /* Submit */
+#brxe-spyxea .form-group:nth-child(1) { order: 1; } /* Name */
+#brxe-spyxea .form-group:nth-child(2) { order: 2; } /* Email */
+#brxe-spyxea .form-group:nth-child(3) { order: 3; } /* Phone */
+#brxe-spyxea .form-group:nth-child(4) { order: 5; } /* Terms */
+#brxe-spyxea .submit-button-wrapper { order: 4; }   /* Submit */
+
+/* Mobile (portrait + landscape) */
+@media (max-width: 768px) {
+  #brxe-spyxea {
+    flex-direction: column; /* stack vertically */
+  }
+
+  #brxe-spyxea .form-group:nth-child(4) { order: 4; } /* Terms */
+  #brxe-spyxea .submit-button-wrapper { order: 5; }   /* Submit */
+}
