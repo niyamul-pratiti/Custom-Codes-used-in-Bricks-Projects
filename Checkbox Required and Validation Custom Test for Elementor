@@ -1,0 +1,91 @@
+// Elementor checkbox validation for multiple checkboxes
+(function() {
+    'use strict';
+    
+    const hebrewMessage = 'נא לאשר את מדיניות האתר';
+    
+    function setupValidation(checkbox) {
+        if (!checkbox) return;
+        
+        console.log('Setting up validation for:', checkbox.name, checkbox.id); // Debug log
+        
+        // Make the field required
+        checkbox.required = true;
+        checkbox.setAttribute('required', 'required');
+        checkbox.setAttribute('aria-required', 'true');
+        
+        // Set initial custom validity if not checked
+        if (!checkbox.checked) {
+            checkbox.setCustomValidity(hebrewMessage);
+        }
+        
+        // Override the validation message
+        checkbox.addEventListener('invalid', function(e) {
+            console.log('Invalid event triggered for:', e.target.name); // Debug log
+            e.target.setCustomValidity(hebrewMessage);
+        });
+        
+        // Clear validation when checked
+        checkbox.addEventListener('change', function(e) {
+            console.log('Change event:', e.target.name, 'checked:', e.target.checked); // Debug log
+            if (e.target.checked) {
+                e.target.setCustomValidity('');
+            } else {
+                e.target.setCustomValidity(hebrewMessage);
+            }
+        });
+    }
+    
+    function initializeValidation() {
+        console.log('Initializing validation...'); // Debug log
+        
+        // Target the specific checkboxes from your HTML
+        const selectors = [
+            // First checkbox (regular checkbox field)
+            'input[name="form_fields[field_bd23074]"]',
+            '#form-field-field_bd23074-0',
+            
+            // Second checkbox (acceptance field, already required)
+            'input[name="form_fields[field_c81fae9]"]',
+            '#form-field-field_c81fae9'
+        ];
+        
+        selectors.forEach(selector => {
+            const elements = document.querySelectorAll(selector);
+            console.log(`Found ${elements.length} elements for selector: ${selector}`);
+            elements.forEach(setupValidation);
+        });
+    }
+    
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initializeValidation);
+    } else {
+        initializeValidation();
+    }
+    
+    // Also try after a delay (for dynamic Elementor content)
+    setTimeout(initializeValidation, 1000);
+    
+    // Watch for dynamically added forms
+    const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.addedNodes.length) {
+                initializeValidation();
+            }
+        });
+    });
+    
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+    
+    // Elementor specific: Hook into form validation if available
+    if (window.elementorFrontend) {
+        window.elementorFrontend.hooks.addAction('frontend/element_ready/form.default', function() {
+            setTimeout(initializeValidation, 100);
+        });
+    }
+    
+})();
