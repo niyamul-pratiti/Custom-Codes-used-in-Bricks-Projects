@@ -1,0 +1,26 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Find the specific checkbox inputs for both elements
+    const checkbox1 = document.querySelector('input[name="form-field-uwkwyv[]"]');
+    const checkbox2 = document.querySelector('input[name="form-field-ifhkon[]"]');
+    
+    // Function to handle validation message
+    function setupValidation(checkbox) {
+        if (checkbox) {
+            checkbox.addEventListener('invalid', function(e) {
+                e.target.setCustomValidity('נא לאשר את מדיניות האתר');
+            });
+            
+            checkbox.addEventListener('change', function(e) {
+                e.target.setCustomValidity('');
+            });
+            
+            checkbox.addEventListener('input', function(e) {
+                e.target.setCustomValidity('');
+            });
+        }
+    }
+    
+    // Setup validation for both checkboxes
+    setupValidation(checkbox1);
+    setupValidation(checkbox2);
+});
